@@ -24,7 +24,42 @@ b=a+2
 mylist_sum=mylist+mylist2
 """
 
+def average_above_zero_exercice(table:list):
+    """
+    brief: computes the average of positive values in array
+    Args:
+        table: a list of numeric values, expects at least one positive values in array
+    Returns:
+        moy: the computed average as a float value
+    Raises:
+        ValueError if no positive value is found
+        ValueError if table is not a list
+    """
+    
+    if not(isinstance(table, list)):
+        raise ValueError("Table is not a list")
+    
+    # Values initialization
+    valSum = 0.0
+    n = 0
 
+    # Main program
+    for val in table:
+        if val > 0:
+            valSum += float(val)
+            n += 1
+    moy = 0
+    
+    if n <= 0:
+        raise ValueError("Number of positive values less or equal than 0")
+    
+    moy = valSum / n
+    
+    return moy
+
+
+print("Positive average = " + str(average_above_zero_exercice([5, 4, 1, 0, -6])))
+"""
 def average_above_zero(input_list):
     ##
     # compute the average of positive values
@@ -51,7 +86,7 @@ def average_above_zero(input_list):
     average=float(positive_values_sum)/float(positive_values_count)
     print('Positive elements average is '+str(average))
     return float(average)
-
+"""
 """#testing average_above_zero function:
 mylist=[1,2,3,4,-7]
 result=average_above_zero(mylist)
