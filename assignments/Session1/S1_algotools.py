@@ -9,32 +9,38 @@ def average_above_zero(tab):
     Arg: 
         a list of numeric values, except on positive value, else it will raise an Error
     Return: 
-        the computed average as a float value
+        a list with the computed average as a float value and the max value
     Raise: 
         ValueError if no positive value is found
         ValueError if input tab is not a list
     """
     if not(isinstance(tab,list)):
         raise ValueError("Expected a list as input")
+    return_vals=[]
     average=0.0
     nPositiveValue=0
     valSum=0.0
+    maxi=0
     #NMAX = len(tab)
     #for idx in range(NMAX)
     for value in tab:
         if value>0:
             valSum=valSum+float(value)
             nPositiveValue=nPositiveValue+1
+            if (maxi<value):
+                maxi=value
     if nPositiveValue<=0:
         raise ValueError("No positive value found")
     average=valSum/nPositiveValue
-    return average
+    return_vals=[average,maxi]
+    return return_vals
 
 
 test_tab=[1,2,3,-5,0,100,5,0,0,0,0,1]
 moy=average_above_zero(test_tab)
-print(moy)
-print('Positive values average={v}'.format(v=moy))
+print(moy[0])
+print('Positive values average={v}'.format(v=moy[0]))
+print('Max value={max}'.format(max=moy[1]))
 
 #
 #
