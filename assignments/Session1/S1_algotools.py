@@ -132,11 +132,11 @@ def average_above_zero(tab):
         return average
 
 
-test_tab = [1,2,3,-5]
+test_tab = [1,7,8,-5 , 5]
 moy = average_above_zero(test_tab)
-print("Positive value average =")
+print("Positive value average =" .moy)
 print(moy)
-print('Positive value average=(v)' .format(v=moy))
+
 
 """
 #test max_value function
