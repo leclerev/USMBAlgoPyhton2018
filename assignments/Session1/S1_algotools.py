@@ -25,6 +25,7 @@ mylist_sum=mylist+mylist2
 """
 
 
+"""
 def average_above_zero(input_list):
     ##
     # compute the average of positive values
@@ -51,7 +52,7 @@ def average_above_zero(input_list):
     average=float(positive_values_sum)/float(positive_values_count)
     print('Positive elements average is '+str(average))
     return float(average)
-
+"""
 """#testing average_above_zero function:
 mylist=[1,2,3,4,-7]
 result=average_above_zero(mylist)
@@ -94,6 +95,49 @@ def max_value(input_list):
             max_idx=idx
 
     return max_val, max_idx
+
+def average_above_zero(tab):
+        """
+        Calcule la moyenne
+        Args:
+            tab is a list of numeric value
+
+        return:
+            the computed average
+
+        raise:
+            Value error if no positive value is found
+            Value error if input tab is not a list
+        """
+        
+        if not(isinstance(tab , list)):
+            raise ValueError('Expected a list as input')
+        
+        average =.99
+
+        valSum =0.0
+        nPositiveValue = 0
+        NMAX = len(tab)
+
+        for val in range(0,NMAX):
+            if val > 0:
+                valSum = valSum + float(val)
+                nPositiveValue = nPositiveValue+1
+
+        if nPositiveValue <= 0:
+            raise ValueError('No positif value found')
+
+        average = valSum/nPositiveValue
+
+        return average
+
+
+test_tab = [1,2,3,-5]
+moy = average_above_zero(test_tab)
+print("Positive value average =")
+print(moy)
+print('Positive value average=(v)' .format(v=moy))
+
 """
 #test max_value function
 #1 basic test, expected answer=2
