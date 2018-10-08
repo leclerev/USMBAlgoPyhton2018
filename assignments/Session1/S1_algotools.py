@@ -57,7 +57,6 @@ def average_above_zero_exercice(table:list):
     
     return moy
 
-
 print("Positive average = " + str(average_above_zero_exercice([5, 4, 1, 0, -6])))
 """
 def average_above_zero(input_list):
@@ -95,6 +94,18 @@ message='The average of positive samples of {list_value} is {res}'.format(list_v
 print(message)
 """
 
+def max_value_in_array(list):
+    maxValue = 0.0
+    for value in list:
+        if value > maxValue:
+            maxValue = value
+            
+    return maxValue
+    
+print("Max value (expected 10): " + str(max_value_in_array([0, 5, 10, 3, 4])))
+    
+
+"""
 def max_value(input_list):
     ##
     # basic function able to return the max value of a list
@@ -108,11 +119,11 @@ def max_value(input_list):
     max_val=input_list[0]
     max_idx=0
     #compute the average of positive elements of a list
-    """for item in input_list:
+    for item in input_list:
         #select only positive items
         if max_val<item:
             max_val=item
-    """
+    
     #generic style : iterate over the range of list indexes
     for idx in range(len(input_list)):
         #select only positive items
@@ -129,6 +140,10 @@ def max_value(input_list):
             max_idx=idx
 
     return max_val, max_idx
+"""    
+
+
+
 """
 #test max_value function
 #1 basic test, expected answer=2
