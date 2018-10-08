@@ -57,19 +57,7 @@ def average_above_zero_exercice(table):
     
     moy = valSum / n
     
-    return moy
-
-def test_average_ok():
-    assert average_above_zero_exercice([5, 2, 0, -2]) == 7
-
-def test_average_not_enought_positive_values():
-    with pytest.raises(ValueError):
-        average_above_zero_exercice([0, -2, -6])
-        
-def test_average_not_a_list():
-    with pytest.raises(ValueError):
-        average_above_zero_exercice(5)
-        
+    return moy        
 
 print("Positive average = " + str(average_above_zero_exercice([5, 4, 1, 0, -6])))
 

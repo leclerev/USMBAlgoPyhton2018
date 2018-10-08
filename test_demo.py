@@ -42,9 +42,9 @@ def check_S1_selective_average(testList):
     # @test ensures the function returns the correct average value
     import numpy as np
     #another way to process the positive elements average to compare with
-    positive_elements_float_array=np.array([i for i in testList if i >= 0], dtype=float)
-    reference_average_value=np.mean(positive_elements_float_array)
-    assert load_S1_script().average_above_zero_exercice(testList) ==reference_average_value
+    positive_elements_float_array=np.array([i for i in testList if i > 0], dtype=float)
+    reference_average_value=float(np.mean(positive_elements_float_array))
+    assert load_S1_script().average_above_zero_exercice(testList) == reference_average_value
 
 def test_S1_selective_average_non_zeros_values():
     ##
@@ -59,7 +59,8 @@ def test_S1_selective_average_with_zeros_values():
 def test_S1_selective_average_with_negative_values():
     ##
     # @test validates average_above_zero works fine with integer values <=0
-    check_S1_selective_average([0,-7])
+    with (ValueError):
+        check_S1_selective_average([0,-7])
 
 def test_S1_selective_average_with_string_values():
     ##
