@@ -59,7 +59,6 @@ def average_above_zero_exercice(table:list):
     
     return moy
 
-"""
 def test_average_ok():
     assert average_above_zero_exercice([5, 2, 0, -2]) == 7
 
@@ -71,7 +70,6 @@ def test_average_not_a_list():
     with pytest.raises(ValueError):
         average_above_zero_exercice(5)
         
-"""
 
 print("Positive average = " + str(average_above_zero_exercice([5, 4, 1, 0, -6])))
 
