@@ -134,8 +134,30 @@ def average_above_zero(tab):
 
 
 test_tab = [1,7,8,-5 , 5]
+<<<<<<< HEAD
 moy = average_above_zero(test_tab)
+=======
+moy = average_above_zero(testTab)
+>>>>>>> 3727b2a18e3e2302f838bca50faf188cddfdbc3c
 print(moy)
+
+def max_value(tabValue)
+     """
+        Calcule la valeur max du tableau
+        Args:
+            tab is a list of numeric value
+
+        return:
+            the max value
+
+        raise:
+        """
+        maxTab = max(testTab)
+        return maxTab
+
+
+tab = [1,7,8,-5 , 5]
+maxTab
 
 
 tab = [1,2,3,4]
