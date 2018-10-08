@@ -59,8 +59,11 @@ def test_S1_selective_average_with_zeros_values():
 def test_S1_selective_average_with_negative_values():
     ##
     # @test validates average_above_zero works fine with integer values <=0
-    with (ValueError):
+    try:
         check_S1_selective_average([0,-7])
+        assert False
+    except ValueError:
+        assert True
 
 def test_S1_selective_average_with_string_values():
     ##
