@@ -26,7 +26,7 @@ b=a+2
 mylist_sum=mylist+mylist2
 """
 
-def average_above_zero_exercice(table:list):
+def average_above_zero_exercice(table):
     """
     brief: computes the average of positive values in array
     Args:
