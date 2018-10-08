@@ -58,6 +58,7 @@ def average_above_zero_exercice(table:list):
     return moy
 
 print("Positive average = " + str(average_above_zero_exercice([5, 4, 1, 0, -6])))
+
 """
 def average_above_zero(input_list):
     ##
@@ -142,6 +143,7 @@ def max_value(input_list):
             max_idx=idx
 
     return max_val, max_idx
+
 
 #test max_value function
 #1 basic test, expected answer=2
