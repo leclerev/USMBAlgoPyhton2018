@@ -142,11 +142,7 @@ def max_value(input_list):
             max_idx=idx
 
     return max_val, max_idx
-"""    
 
-
-
-"""
 #test max_value function
 #1 basic test, expected answer=2
 mylist=[-1,2,-20]
@@ -160,6 +156,20 @@ print('Max value of {input_list} is {max_scan}'.format(input_list=mylist, max_sc
 max_value([])
 """
 
+def reverse_table(table):
+    # index => 0 -> length-1, 1 -> length - 2, ... ,length-1 -> 0
+    totalLength = len(table)
+    length = totalLength - 1
+    
+    for i in range(int(totalLength / 2)):
+        table[length - i] += table[i]
+        table[i] = table[length - i] - table[i]
+        table[length - i] -= table[i]
+    
+    return table
+    
+table = [5, 4, 3, 8, 10, 80, -50]
+print("Table: " + str(table) + " reversed: " + str(reverse_table(table)))
 """
 # hints to solve the roi_bbox function exercise: numpy basics
 
