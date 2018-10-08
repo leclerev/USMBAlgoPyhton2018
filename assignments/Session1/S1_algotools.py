@@ -94,15 +94,17 @@ message='The average of positive samples of {list_value} is {res}'.format(list_v
 print(message)
 """
 
-def max_value_in_array(list):
+def max_value_in_array(pList):
     maxValue = 0.0
-    for value in list:
-        if value > maxValue:
-            maxValue = value
+    index = 0
+    for i in range(len(pList)):
+        if pList[i] > maxValue:
+            maxValue = pList[i]
+            index = i
             
-    return maxValue
+    return maxValue, index
     
-print("Max value (expected 10): " + str(max_value_in_array([0, 5, 10, 3, 4])))
+print("Max value (expected 10, 2): " + str(max_value_in_array([0, 5, 10, 3, 4])))
     
 
 """
