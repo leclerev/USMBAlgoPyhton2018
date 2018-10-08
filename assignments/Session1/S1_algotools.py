@@ -134,8 +134,15 @@ def average_above_zero(tab):
 
 test_tab = [1,7,8,-5 , 5]
 moy = average_above_zero(test_tab)
-print("Positive value average =" .moy)
 print(moy)
+
+
+tab = [1,2,3,4]
+tabMax = max(tab)
+print(tabMax)
+
+
+
 
 
 """
