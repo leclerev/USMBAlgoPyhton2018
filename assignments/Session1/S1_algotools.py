@@ -133,9 +133,26 @@ def average_above_zero(tab):
 
 
 test_tab = [1,7,8,-5 , 5]
-moy = average_above_zero(test_tab)
-print("Positive value average =" .moy)
+moy = average_above_zero(testTab)
 print(moy)
+
+def max_value(tabValue)
+     """
+        Calcule la valeur max du tableau
+        Args:
+            tab is a list of numeric value
+
+        return:
+            the max value
+
+        raise:
+        """
+        maxTab = max(testTab)
+        return maxTab
+
+
+tab = [1,7,8,-5 , 5]
+maxTab
 
 
 """
